@@ -14,3 +14,10 @@ def create_todo(todo: TodoCreate) -> Todo:
 
 def get_all_todos() -> List[Todo]:
   return todos
+
+
+def get_todo_by_id(todo_id: int) -> Todo | None:
+  for todo in todos:
+    if todo.id == todo_id:
+      return todo
+  return None
